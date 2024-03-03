@@ -13,7 +13,7 @@ const TextInput = ({ name, label, register, error }: TextInputProps) => {
     <div className="mb-3">
       <label 
         htmlFor={name + "-input"}
-        className="block text-sm font-medium text-gray-700"
+        className="block text-sm font-medium text-blue-300"
       >
         {label}
       </label>
@@ -21,6 +21,7 @@ const TextInput = ({ name, label, register, error }: TextInputProps) => {
         id={name + "-input"}
         type="text"
         {...register(name)} 
+        className="py-2 px-4 outline-none"
       />
       {error && <p className="mt-2 text-sm text-red-500">{error.message}</p>}
     </div>

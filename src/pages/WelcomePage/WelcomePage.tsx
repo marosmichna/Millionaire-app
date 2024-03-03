@@ -15,7 +15,7 @@ const WelcomePage = () => {
   const { register, handleSubmit, formState: {errors} } = useForm<FildValue>();
 
   const dispatch = useDispatch<AppDispatch>();
-  const userName = useSelector((state: RootState) => state.userName.userName)
+  const userName = useSelector((state: RootState) => state.userName.userName);
 
   const onSubmit = (data: FildValue) => {
     console.log(data)
@@ -24,19 +24,26 @@ const WelcomePage = () => {
 
   return (
     <div className="h-screen flex justify-center items-center">
-        <div className="bg-black opacity-60 hover:opacity-100">
-            <div className="px-5 py-3">
+        <div className="bg-blue-600 opacity-50 hover:opacity-90 px-3 py-5">
+            <div>
              <H1 className="text-white hover:text-blue-200">Vitajte v hre Milionár</H1>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form 
+              onSubmit={handleSubmit(onSubmit)}
+              className="text-center"
+            >
                 <TextInput 
                     name="userName"
                     label="Používateľské meno"  
                     register={register}
                     error={errors.userName}
                 />
-                <button className="bg-white" type="submit">Submit</button>
-                <p className="text-white">{userName}</p>
+                <button 
+                  className="bg-blue-200 py-2 px-4 rounded-md font-medium" 
+                  type="submit"
+                >
+                  Submit
+                </button>
             </form>
             
         </div>    
