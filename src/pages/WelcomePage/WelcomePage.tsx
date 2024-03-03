@@ -44,8 +44,7 @@ const WelcomePage = () => {
                 >
                   Submit
                 </button>
-            </form>
-            
+            </form>       
         </div>    
     </div>
   )
