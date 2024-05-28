@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Draft } from "immer";
-import questionData from "../../data/millionaireQuestion.json";
 
 interface MillionaireQuestion {
     question: string,
