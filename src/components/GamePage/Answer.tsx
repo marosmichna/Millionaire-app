@@ -4,17 +4,30 @@ import { RootState } from "../../state/store";
 type AnswerProps = {
     firstAnswerNumber: number,
     secondAnswerNumber: number,
+    setUserChoice: (choice: string) => void;
 }
 
-const Answer = ({ firstAnswerNumber, secondAnswerNumber }: AnswerProps) => {
+const Answers = ({ firstAnswerNumber, secondAnswerNumber, setUserChoice }: AnswerProps) => {
 
-    const answer = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[firstAnswerNumber][secondAnswerNumber].answers);
+    
+
+    const answers = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[firstAnswerNumber][secondAnswerNumber].answers);
+
+    const handleUserChoice = (answer: string) => {
+        setUserChoice(answer);
+    }
 
     return (
         <div>
-        {answer}
+            {
+                answers.map((answer, index) => (
+                    <div key={index}>
+                        <button onClick={() => handleUserChoice(answer)}>{answer}</button>
+                    </div>
+                ))
+            }
         </div>
     );
 };
 
-export default Answer;
+export default Answers;

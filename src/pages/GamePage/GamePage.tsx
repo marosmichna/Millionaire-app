@@ -6,33 +6,64 @@ import data from "../../data/millionaireQuestion.json"
 import { loadMillionaireQuestion } from "../../state/millionaireQuestion/millionaireQuestionSlice";
 import Question from "../../components/GamePage/Question";
 import Answer from "../../components/GamePage/Answer";
+import { useEffect, useState } from "react";
+import { incrementNumberOfQuestion } from "../../state/numberOfQuestion/numberOfQuestionSlice";
 
 const GamePage = () => {
+
+    const [userChoice, setUserChoice] = useState("");
+    // const [firstNumber, setFirstNumber] = useState(0);
+    const [randomSecondQuestion, setRandomSecondQuestion] = useState(Math.floor(Math.random() * 3));
+
+    // let firstNumber = 0;
+    // let correctUserAnswer = false;
+
     const dispatch = useDispatch<AppDispatch>();
     
 
-    dispatch(loadMillionaireQuestion(data))
+    // dispatch(loadMillionaireQuestion(data));
 
-    const randomSecondQuestion = Math.floor(Math.random() * 3);
+    useEffect(() => {
+      dispatch(loadMillionaireQuestion(data));
+    }, [dispatch]);
 
-    console.log(randomSecondQuestion);
+    const millionaireQuestions = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions);
+    const numberOfQuestion = useSelector((state: RootState) => state.numberOfQuestion.numberOfQuestion)
 
-    
-    const answer = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[1][randomSecondQuestion].answers);
-    const correctAnswer = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[1][randomSecondQuestion].correctAnswer);
-    const value = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[1][randomSecondQuestion].value);
+    if (!millionaireQuestions || !millionaireQuestions[numberOfQuestion] || !millionaireQuestions[numberOfQuestion][randomSecondQuestion]) {
+      return; 
+    }
+
+    const correctAnswer = millionaireQuestions[numberOfQuestion][randomSecondQuestion].correctAnswer;
+
+    const value = millionaireQuestions[numberOfQuestion][randomSecondQuestion].value;
+
+    const handleSubmitQuestion = () => {
+      console.log("CLick")
+
+        if (userChoice === correctAnswer) {
+          alert("lala")
+          dispatch(incrementNumberOfQuestion());
+          setRandomSecondQuestion(Math.floor(Math.random() * 3))
+          setUserChoice("");
+        }
+      
+    }
+
     return (
       <div className="w-full h-screen flex mx-auto">
-        <div className="grid grid-cols-1 w-full sm:grid-cols-2 mx-10 sm:mx-0">
-          <div className="text-white bg-blue-800 sm:ml-auto">
+        <div className="grid grid-cols-1 w-full sm:grid-cols-2  mx-10 sm:mx-0">
+          <div className="text-white bg-blue-800 h-[250px] mt-auto mb-auto sm:ml-auto">
             <Question
-              firstQuestionNumber={0} 
+              firstQuestionNumber={numberOfQuestion} 
               secondQuestionNumber={randomSecondQuestion}
             />
             <Answer
-              firstAnswerNumber={0}
+              firstAnswerNumber={numberOfQuestion}
               secondAnswerNumber={randomSecondQuestion}
+              setUserChoice={setUserChoice}
             />
+            <button onClick={handleSubmitQuestion}>Ok</button>
           </div>
           <div className="text-white bg-blue-200 sm:ml-auto">
             <Scoore />

@@ -6,7 +6,9 @@ const Scoore = () => {
 
   const userName = useSelector((state: RootState) => state.userName.userName);
 
-  const winnerMoneys = [3000, 2000, 1000]
+  const numberOfQuestion = useSelector((state: RootState) => state.numberOfQuestion.numberOfQuestion);
+
+  const winnerMoneys = [0, 1000, 2000, 3000, 4000];
 
   return (
     <div>
@@ -14,11 +16,17 @@ const Scoore = () => {
             <div>{userName}</div>
             <div>
                 {
-                  winnerMoneys.map((winnerMoney, index) => (
-                    <h1 key={index}>{winnerMoney}</h1>
+                  winnerMoneys.slice().reverse().map((winnerMoney, index) => (
+                    <h1 
+                      key={index}
+                      className={(winnerMoneys.length - 1 - index) === numberOfQuestion ? "font-bold" : "font-normal"}
+                    >
+                      {winnerMoney}
+                    </h1>
                   ))
                 }
                 <h2>Scoore</h2>
+                <p>{numberOfQuestion}</p>
             </div>
         </div>
     </div>
