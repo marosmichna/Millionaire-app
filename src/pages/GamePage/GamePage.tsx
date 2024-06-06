@@ -8,12 +8,14 @@ import Question from "../../components/GamePage/Question";
 import Answer from "../../components/GamePage/Answer";
 import { useEffect, useState } from "react";
 import { incrementNumberOfQuestion } from "../../state/numberOfQuestion/numberOfQuestionSlice";
+import ConfirmModal from "../../components/Modal/ConfirmModal";
 
 const GamePage = () => {
 
     const [userChoice, setUserChoice] = useState("");
     const [clickedIndex, setClickedIndex] = useState<number | null>(null);
     const [randomSecondQuestion, setRandomSecondQuestion] = useState(Math.floor(Math.random() * 3));
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const dispatch = useDispatch<AppDispatch>();
     
@@ -31,17 +33,22 @@ const GamePage = () => {
     const correctAnswer = millionaireQuestions[numberOfQuestion][randomSecondQuestion].correctAnswer;
 
     const handleSubmitQuestion = () => {
-      alert("dddd");
+      setIsModalOpen(true);
+    }
 
-        if (userChoice === correctAnswer) {
-          // alert("lala")
+    const handleConfirm = () => {
+      setIsModalOpen(false);
+      if (userChoice === correctAnswer) {
           dispatch(incrementNumberOfQuestion());
-          setRandomSecondQuestion(Math.floor(Math.random() * 3))
+          setRandomSecondQuestion(Math.floor(Math.random() * 3));
           setUserChoice("");
           setClickedIndex(null);
-        }
-      
-    }
+      }
+  }
+
+    const handleCancel = () => {
+      setIsModalOpen(false);
+  }
 
     return (
       <div className="w-full h-screen flex mx-auto">
@@ -69,6 +76,11 @@ const GamePage = () => {
             <Scoore />
           </div>
         </div>
+        <ConfirmModal 
+          isOpen={isModalOpen}
+          onConfirm={handleConfirm}
+          onCancel={handleCancel}
+        />
       </div>
     )
 }
