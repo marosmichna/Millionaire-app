@@ -12,6 +12,7 @@ import { incrementNumberOfQuestion } from "../../state/numberOfQuestion/numberOf
 const GamePage = () => {
 
     const [userChoice, setUserChoice] = useState("");
+    const [clickedIndex, setClickedIndex] = useState<number | null>(null);
     // const [firstNumber, setFirstNumber] = useState(0);
     const [randomSecondQuestion, setRandomSecondQuestion] = useState(Math.floor(Math.random() * 3));
 
@@ -46,6 +47,7 @@ const GamePage = () => {
           dispatch(incrementNumberOfQuestion());
           setRandomSecondQuestion(Math.floor(Math.random() * 3))
           setUserChoice("");
+          setClickedIndex(null);
         }
       
     }
@@ -53,7 +55,7 @@ const GamePage = () => {
     return (
       <div className="w-full h-screen flex mx-auto">
         <div className="grid grid-cols-1 w-full sm:grid-cols-2  mx-10 sm:mx-0">
-          <div className="text-white bg-blue-800 h-[250px] mt-auto mb-auto sm:ml-auto">
+          <div className="text-white   h-[250px] w-[500px] my-auto sm:ml-auto">
             <Question
               firstQuestionNumber={numberOfQuestion} 
               secondQuestionNumber={randomSecondQuestion}
@@ -61,11 +63,13 @@ const GamePage = () => {
             <Answer
               firstAnswerNumber={numberOfQuestion}
               secondAnswerNumber={randomSecondQuestion}
+              clickedIndex={clickedIndex}
+              setClickedIndex={setClickedIndex}
               setUserChoice={setUserChoice}
             />
             <button onClick={handleSubmitQuestion}>Ok</button>
           </div>
-          <div className="text-white bg-blue-200 sm:ml-auto">
+          <div className="text-white bg-blue-200  sm:ml-auto">
             <Scoore />
           </div>
         </div>
