@@ -41,22 +41,62 @@
   ],
   [
     { 
-      "question": "aaaa", 
-      "answers": ["Praha", "Brno", "Moskva", "Paríž"], 
-      "correctAnswer": "Praha", 
-      "value": 2000 
+      "question": "Kto je autorom diela Mor ho?", 
+      "answers": ["Zigmund Pálffy", "Samo Chalupka", "Milan Rúfus", "Steve Jobs"], 
+      "correctAnswer": "Samo Chalupka", 
+      "value": 3000 
     },
     { 
-      "question": "bbbb", 
-      "answers": ["Praha", "Bratislava", "Zvolen", "Utekáč"], 
-      "correctAnswer": "Bratislava", 
-      "value": 2000 
+      "question": "Kto je autorom diela Marína?", 
+      "answers": ["Pišta Lakatoš", "Jozef Cíger Hronský", "Ferko Mrkvička", "Andrej Sládkovič"], 
+      "correctAnswer": "Andrej Sládkovič", 
+      "value": 3000 
     },
     { 
-      "question": "cccc", 
-      "answers": ["Tokio", "Atény", "Paríž", "Berlín"], 
-      "correctAnswer": "Paríž", 
-      "value": 2000 
+      "question": "Kto je autorom diela Maroško?", 
+      "answers": ["Martin Rázus", "Erich Maria Remarque", "Daniel Hevier", "Lionel Messi"], 
+      "correctAnswer": "Martin Rázus", 
+      "value": 3000 
+    }
+  ],
+  [
+    { 
+      "question": "V ktorom storočí vzniklo Československo?", 
+      "answers": ["17. storočie", "20. storočie", "22. storočie", "7. storočie"], 
+      "correctAnswer": "20. storočie", 
+      "value": 4000 
+    },
+    { 
+      "question": "V ktorom roku zaniklo Rakúsko-Uhorsko", 
+      "answers": ["1918", "1914", "2000", "2185"], 
+      "correctAnswer": "1918", 
+      "value": 4000 
+    },
+    { 
+      "question": "V ktorom roku skončila Druhá Svetová Vojna", 
+      "answers": ["1975", "1948", "1940", "1945"], 
+      "correctAnswer": "1945", 
+      "value": 4000 
+    }
+  ],
+  [
+    { 
+      "question": "Deň matiek je vždy v druhú májovú nedeľu. V aký najnižší dátum teda môže byť?", 
+      "answers": ["7. apríl", "8. apríl", "10. apríl", "1. apríl"], 
+      "correctAnswer": "8. apríl", 
+      "value": 5000 
+    },
+    { 
+      "question": "Aký je najskorší možný dátum pre Deň vďakyvzdania v Spojených štátoch, ktorý sa slávi štvrtý štvrtok v novembri?", 
+      "answers": ["18. november", "28. november", "20. november", "22. november"], 
+      "correctAnswer": "22. november", 
+      "value": 5000 
+    },
+    { 
+      "question": "Aký je najskorší možný dátum, kedy môže byť sviatok Všetkých svätých (Dušičky)?", 
+      "answers": ["1. november", "7. november", "1. december", "6. november"], 
+      "correctAnswer": "1. november", 
+      "value": 5000 
     }
   ]
 ]

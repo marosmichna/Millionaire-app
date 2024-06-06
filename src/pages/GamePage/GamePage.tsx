@@ -13,17 +13,10 @@ const GamePage = () => {
 
     const [userChoice, setUserChoice] = useState("");
     const [clickedIndex, setClickedIndex] = useState<number | null>(null);
-    // const [firstNumber, setFirstNumber] = useState(0);
     const [randomSecondQuestion, setRandomSecondQuestion] = useState(Math.floor(Math.random() * 3));
-
-    // let firstNumber = 0;
-    // let correctUserAnswer = false;
 
     const dispatch = useDispatch<AppDispatch>();
     
-
-    // dispatch(loadMillionaireQuestion(data));
-
     useEffect(() => {
       dispatch(loadMillionaireQuestion(data));
     }, [dispatch]);
@@ -37,13 +30,11 @@ const GamePage = () => {
 
     const correctAnswer = millionaireQuestions[numberOfQuestion][randomSecondQuestion].correctAnswer;
 
-    const value = millionaireQuestions[numberOfQuestion][randomSecondQuestion].value;
-
     const handleSubmitQuestion = () => {
-      console.log("CLick")
+      alert("dddd");
 
         if (userChoice === correctAnswer) {
-          alert("lala")
+          // alert("lala")
           dispatch(incrementNumberOfQuestion());
           setRandomSecondQuestion(Math.floor(Math.random() * 3))
           setUserChoice("");
@@ -67,9 +58,14 @@ const GamePage = () => {
               setClickedIndex={setClickedIndex}
               setUserChoice={setUserChoice}
             />
-            <button onClick={handleSubmitQuestion}>Ok</button>
+            <button 
+              className="mt-6 bg-gradient-to-r from-blue-800 to-[#070c34] py-2 w-[200px] rounded-lg hover:from-green-400 hover:to-green-500]"
+              onClick={handleSubmitQuestion}
+            >
+              Potvrdiť odpoveď
+            </button>
           </div>
-          <div className="text-white bg-blue-200  sm:ml-auto">
+          <div className="text-white sm:ml-auto">
             <Scoore />
           </div>
         </div>
