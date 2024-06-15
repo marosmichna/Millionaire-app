@@ -8,7 +8,7 @@ const Scoore = () => {
 
   const numberOfQuestion = useSelector((state: RootState) => state.numberOfQuestion.numberOfQuestion);
 
-  const winnerMoneys = [0, 1000, 2000, 3000, 4000, 5000];
+  const winnerMoneys = [0, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 600000, 800000, 1000000];
 
   return (
     <div>
@@ -19,7 +19,7 @@ const Scoore = () => {
                   winnerMoneys.slice().reverse().map((winnerMoney, index) => (
                     <h1 
                       key={index}
-                      className={(winnerMoneys.length - 1 - index) === numberOfQuestion ? "font-bold bg-gradient-to-r from-orange-800 to-[#80ff02]" : "font-normal"}
+                      className={`py-1 ${(winnerMoneys.length - 1 - index) === numberOfQuestion ? "font-bold bg-gradient-to-r from-orange-800 to-[#80ff02]" : "font-normal"}`}
                     >
                       {winnerMoney}
                     </h1>

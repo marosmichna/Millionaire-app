@@ -37,18 +37,18 @@ const GamePage = () => {
     }
 
     const handleConfirm = () => {
-      setIsModalOpen(false);
-      if (userChoice === correctAnswer) {
-          dispatch(incrementNumberOfQuestion());
-          setRandomSecondQuestion(Math.floor(Math.random() * 3));
-          setUserChoice("");
-          setClickedIndex(null);
-      }
-  }
+        setIsModalOpen(false);
+        if (userChoice === correctAnswer) {
+            dispatch(incrementNumberOfQuestion());
+            setRandomSecondQuestion(Math.floor(Math.random() * 3));
+            setUserChoice("");
+            setClickedIndex(null);
+        }
+    }
 
     const handleCancel = () => {
-      setIsModalOpen(false);
-  }
+        setIsModalOpen(false);
+    }
 
     return (
       <div className="w-full h-screen flex mx-auto">

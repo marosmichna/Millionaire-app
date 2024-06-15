@@ -1,19 +1,19 @@
 [
   [
     { 
-      "question": "Koľko je 1 + 1?", 
+      "question": "Koľko je 1 + 1 ?", 
       "answers": ["1", "2", "3", "4"], 
       "correctAnswer": "2", 
       "value": 1000 
     },
     { 
-      "question": "Koľko je 3 + 1?", 
+      "question": "Koľko je 3 + 1 ?", 
       "answers": ["1", "2", "3", "4"], 
       "correctAnswer": "4", 
       "value": 1000 
     },
     { 
-      "question": "Koľko je 2 + 2?", 
+      "question": "Koľko je 2 + 2 ?", 
       "answers": ["1", "2", "3", "4"], 
       "correctAnswer": "4", 
       "value": 1000 
@@ -21,19 +21,19 @@
   ],
   [
     { 
-      "question": "Aké je hlavné mesto Česka?", 
+      "question": "Aké je hlavné mesto Česka ?", 
       "answers": ["Praha", "Brno", "Moskva", "Paríž"], 
       "correctAnswer": "Praha", 
       "value": 2000 
     },
     { 
-      "question": "Aké je hlavné mesto Slovenska?", 
+      "question": "Aké je hlavné mesto Slovenska ?", 
       "answers": ["Praha", "Bratislava", "Zvolen", "Utekáč"], 
       "correctAnswer": "Bratislava", 
       "value": 2000 
     },
     { 
-      "question": "Aké je hlavné mesto Francúzska?", 
+      "question": "Aké je hlavné mesto Francúzska ?", 
       "answers": ["Tokio", "Atény", "Paríž", "Berlín"], 
       "correctAnswer": "Paríž", 
       "value": 2000 
@@ -41,19 +41,19 @@
   ],
   [
     { 
-      "question": "Kto je autorom diela Mor ho?", 
+      "question": "Kto je autorom diela Mor ho ?", 
       "answers": ["Zigmund Pálffy", "Samo Chalupka", "Milan Rúfus", "Steve Jobs"], 
       "correctAnswer": "Samo Chalupka", 
       "value": 3000 
     },
     { 
-      "question": "Kto je autorom diela Marína?", 
+      "question": "Kto je autorom diela Marína ?", 
       "answers": ["Pišta Lakatoš", "Jozef Cíger Hronský", "Ferko Mrkvička", "Andrej Sládkovič"], 
       "correctAnswer": "Andrej Sládkovič", 
       "value": 3000 
     },
     { 
-      "question": "Kto je autorom diela Maroško?", 
+      "question": "Kto je autorom diela Maroško ?", 
       "answers": ["Martin Rázus", "Erich Maria Remarque", "Daniel Hevier", "Lionel Messi"], 
       "correctAnswer": "Martin Rázus", 
       "value": 3000 
@@ -61,19 +61,19 @@
   ],
   [
     { 
-      "question": "V ktorom storočí vzniklo Československo?", 
+      "question": "V ktorom storočí vzniklo Československo ?", 
       "answers": ["17. storočie", "20. storočie", "22. storočie", "7. storočie"], 
       "correctAnswer": "20. storočie", 
       "value": 4000 
     },
     { 
-      "question": "V ktorom roku zaniklo Rakúsko-Uhorsko", 
+      "question": "V ktorom roku zaniklo Rakúsko-Uhorsko ?", 
       "answers": ["1918", "1914", "2000", "2185"], 
       "correctAnswer": "1918", 
       "value": 4000 
     },
     { 
-      "question": "V ktorom roku skončila Druhá Svetová Vojna", 
+      "question": "V ktorom roku skončila Druhá Svetová Vojna ?", 
       "answers": ["1975", "1948", "1940", "1945"], 
       "correctAnswer": "1945", 
       "value": 4000 
@@ -81,22 +81,222 @@
   ],
   [
     { 
-      "question": "Deň matiek je vždy v druhú májovú nedeľu. V aký najnižší dátum teda môže byť?", 
+      "question": "Deň matiek je vždy v druhú májovú nedeľu. V aký najnižší dátum teda môže byť ?", 
       "answers": ["7. apríl", "8. apríl", "10. apríl", "1. apríl"], 
       "correctAnswer": "8. apríl", 
       "value": 5000 
     },
     { 
-      "question": "Aký je najskorší možný dátum pre Deň vďakyvzdania v Spojených štátoch, ktorý sa slávi štvrtý štvrtok v novembri?", 
+      "question": "Aký je najskorší možný dátum pre Deň vďakyvzdania v Spojených štátoch, ktorý sa slávi štvrtý štvrtok v novembri ?", 
       "answers": ["18. november", "28. november", "20. november", "22. november"], 
       "correctAnswer": "22. november", 
       "value": 5000 
     },
     { 
-      "question": "Aký je najskorší možný dátum, kedy môže byť sviatok Všetkých svätých (Dušičky)?", 
+      "question": "Aký je najskorší možný dátum, kedy môže byť sviatok Všetkých svätých (Dušičky) ?", 
       "answers": ["1. november", "7. november", "1. december", "6. november"], 
       "correctAnswer": "1. november", 
       "value": 5000 
+    }
+  ],
+  [
+    { 
+      "question": "Aký je názov najväčšej planéty v našej slnečnej sústave ?", 
+      "answers": ["Saturn", "Neptún", "Jupiter", "Mars"], 
+      "correctAnswer": "Jupiter", 
+      "value": 10000 
+    },
+    { 
+      "question": "Kto napísal dielo Kniha džunglí ?", 
+      "answers": ["Mark Twain", "Rudyard Kipling", "Lewis Carroll", "Jules Verne"], 
+      "correctAnswer": "Rudyard Kipling", 
+      "value": 10000 
+    },
+    { 
+      "question": "Aký je hlavný svetadiel pre kengury ?", 
+      "answers": ["Afrika", "Ázia", "Austrália", "Severná Amerika"], 
+      "correctAnswer": "Austrália", 
+      "value": 10000 
+    }
+  ],
+  [
+    { 
+      "question": "Ktorá je najdlhšia rieka v Európe ?", 
+      "answers": ["Volga", "Dunaj", "Rýn", "Seina"], 
+      "correctAnswer": "Volga", 
+      "value": 20000 
+    },
+    { 
+      "question": "Ktorá hora je najvyššia v Afrike ?", 
+      "answers": ["Mount Kenya", "Table Mountain", "Ruwenzori", "Kilimanjaro"], 
+      "correctAnswer": "Kilimanjaro", 
+      "value": 20000 
+    },
+    { 
+      "question": "Ktorá rieka preteká cez Londýn ?", 
+      "answers": ["Seina", "Elba", "Temža", "Rýn"], 
+      "correctAnswer": "Temža", 
+      "value": 20000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto objavil penicilín ?", 
+      "answers": ["Marie Curie", "Isaac Newton", "Albert Einstein", "Alexander Fleming"], 
+      "correctAnswer": "Alexander Fleming", 
+      "value": 50000 
+    },
+    { 
+      "question": "Ktorý prvok má chemickú značku Fe ?", 
+      "answers": ["Zinok", "Železo", "Striebro", "Zlato"], 
+      "correctAnswer": "Železo", 
+      "value": 50000 
+    },
+    { 
+      "question": "Kto je považovaný za otca moderného počítača ?", 
+      "answers": ["Alan Turing", "Bill Gates", "Charles Babbage", "Steve Jobs"], 
+      "correctAnswer": "Alan Turing", 
+      "value": 50000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto vyhral najviac titulov v Tour de France ?", 
+      "answers": ["Miguel Indurain", "Lance Armstrong", "Bernard Hinault", "Chris Froome"], 
+      "correctAnswer": "Lance Armstrong", 
+      "value": 100000 
+    },
+    { 
+      "question": "Ktorý športový tím je známy ako All Blacks ?", 
+      "answers": ["Futbalový tím Nemecka", "Basketbalový tím USA", "Rugbyový tím Nového Zélandu", "Hokejový tím Kanady"], 
+      "correctAnswer": "Rugbyový tím Nového Zélandu", 
+      "value": 100000 
+    },
+    { 
+      "question": "Koľko titul celkovo má v Lige Majstrov klub Fc Liverpool (k roku 2024) ?", 
+      "answers": ["2", "7", "6", 4], 
+      "correctAnswer": "6", 
+      "value": 100000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto je autorom knihy O pôvode druhov ?", 
+      "answers": ["Charles Darwin", "Sigmund Freud", "Albert Einstein", "Nikola Tesla"], 
+      "correctAnswer": "Charles Darwin", 
+      "value": 200000 
+    },
+    { 
+      "question": "Kto bol britským premiérom počas druhej svetovej vojny ?", 
+      "answers": ["Neville Chamberlain", "Margaret Thatcher", "Winston Churchill", "Clement Attlee"], 
+      "correctAnswer": "Winston Churchill", 
+      "value": 200000 
+    },
+    { 
+      "question": "Kto bol zakladateľom firmy Microsoft ?", 
+      "answers": ["Steve Jobs", "Mark Zuckerberg", "Larry Page", "Bill Gates"], 
+      "correctAnswer": "Bill Gates", 
+      "value": 200000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto skomponoval symfóniu Deväť ?", 
+      "answers": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Pyotr Ilyich Tchaikovsky"], 
+      "correctAnswer": "Ludwig van Beethoven", 
+      "value": 300000 
+    },
+    { 
+      "question": "Kto je známy hitom Imagine ?", 
+      "answers": ["Paul McCartney", "Elton John", "John Lennon", "Freddie Mercury"], 
+      "correctAnswer": "John Lennon", 
+      "value": 300000 
+    },
+    { 
+      "question": "Ktorý hudobník je známy ako The King of Rock and Roll ?", 
+      "answers": ["Elvis Presley", "Chuck Berry", "Little Richard", "Buddy Holly"], 
+      "correctAnswer": "Elvis Presley", 
+      "value": 300000 
+    }
+  ],
+  [
+    { 
+      "question": "Ktorý herec hral hlavného hrdinu vo filme Gladiátor ?", 
+      "answers": ["Tom Cruise", "Brad Pitt", "Leonardo DiCaprio", "Russell Crowe"], 
+      "correctAnswer": "Ludwig van Beethoven", 
+      "value": 500000 
+    },
+    { 
+      "question": "Ktorý film získal Oscara za najlepší film v roku 1994 ?", 
+      "answers": ["Pulp Fiction", "Forrest Gump", "Vykúpenie z väznice Shawshank", "Statočné srdce"], 
+      "correctAnswer": "Forrest Gump", 
+      "value": 500000 
+    },
+    { 
+      "question": "Ktorý režisér je známy trilógiou Pán prsteňov ?", 
+      "answers": ["James Cameron", "Peter Jackson", "Steven Spielberg", "Quentin Tarantino"], 
+      "correctAnswer": "Peter Jackson", 
+      "value": 500000 
+    }
+  ],
+  [
+    { 
+      "question": "Ktorý vták má najväčšie rozpätie krídel ?", 
+      "answers": ["Albatros", "Orol", "Sokol", "Sup"], 
+      "correctAnswer": "Albatros", 
+      "value": 600000 
+    },
+    { 
+      "question": "Ktorý kontinent má najväčšie púšte na svete ?", 
+      "answers": ["Austrália", "Ázia", "Afrika", "Južná Amerika"], 
+      "correctAnswer": "Afrika", 
+      "value": 600000 
+    },
+    { 
+      "question": "Ktorá krajina je rozlohou tretia najväčšia ?", 
+      "answers": ["USA", "Čína", "Kanada", "India"], 
+      "correctAnswer": "USA", 
+      "value": 600000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto bol prvým prezidentom USA ?", 
+      "answers": ["Thomas Jefferson", "Abraham Lincoln", "John Adams", "George Washington"], 
+      "correctAnswer": "George Washington", 
+      "value": 800000 
+    },
+    { 
+      "question": "Ako sa volal posledný cisár Západorímskej ríše ?", 
+      "answers": ["Flavius Honorius", "Theodosius", "Romulus Augustus", "Flavius Arcadius"], 
+      "correctAnswer": "Romulus Augustus", 
+      "value": 800000 
+    },
+    { 
+      "question": "Ktorý rímsky cisár bol zavraždený v roku 44 pred naším letopočtom ?", 
+      "answers": ["Julius Caesar", "Augustus", "Nero", "Caligula"], 
+      "correctAnswer": "Julius Caesar", 
+      "value": 800000 
+    }
+  ],
+  [
+    { 
+      "question": "Kto napísal Sto rokov samoty ?", 
+      "answers": ["Pablo Neruda", "Isabel Allende", "Gabriel García Márquez", "Jorge Luis Borges"], 
+      "correctAnswer": "Gabriel García Márquez", 
+      "value": 1000000 
+    },
+    { 
+      "question": "Ktorý spisovateľ vytvoril postavu Sherlocka Holmesa ?", 
+      "answers": ["Agatha Christie", "J.R.R. Tolkien", "George Orwell", "Arthur Conan Doyle"], 
+      "correctAnswer": "Arthur Conan Doyle", 
+      "value": 1000000 
+    },
+    { 
+      "question": "Ktorá kniha začína vetou Všetky šťastné rodiny sú si podobné ?", 
+      "answers": ["Vojna a mier", "Anna Karenina", "Bratia Karamazovovci", "Pýcha a predsudok"], 
+      "correctAnswer": "Anna Karenina", 
+      "value": 1000000 
     }
   ]
 ]
