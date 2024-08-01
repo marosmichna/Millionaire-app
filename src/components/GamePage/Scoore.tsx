@@ -13,7 +13,7 @@ const Scoore = () => {
   return (
     <div>
         <div className=" bg-gradient-to-r from-blue-800 to-[#070c34] flex sm:h-screen sm:flex-col sm:justify-between px-8 w-[150px] text-center">
-            <div>{userName}</div>
+            <div className="mt-2 bg-slate-200 py-2 text-black font-bold rounded-lg">{userName}</div>
             <div>
                 {
                   winnerMoneys.slice().reverse().map((winnerMoney, index) => (

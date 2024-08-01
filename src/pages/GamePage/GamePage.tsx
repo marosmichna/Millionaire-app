@@ -9,6 +9,7 @@ import Answer from "../../components/GamePage/Answer";
 import { useEffect, useState } from "react";
 import { incrementNumberOfQuestion } from "../../state/numberOfQuestion/numberOfQuestionSlice";
 import ConfirmModal from "../../components/Modal/ConfirmModal";
+import { H1 } from "../../components/ui/H1";
 
 const GamePage = () => {
 
@@ -16,6 +17,8 @@ const GamePage = () => {
     const [clickedIndex, setClickedIndex] = useState<number | null>(null);
     const [randomSecondQuestion, setRandomSecondQuestion] = useState(Math.floor(Math.random() * 3));
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isGameActive, setIsGameActive] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     const dispatch = useDispatch<AppDispatch>();
     
@@ -43,11 +46,31 @@ const GamePage = () => {
             setRandomSecondQuestion(Math.floor(Math.random() * 3));
             setUserChoice("");
             setClickedIndex(null);
+        } else {
+          setIsGameActive(false);       
         }
     }
 
     const handleCancel = () => {
         setIsModalOpen(false);
+    }
+
+    if (!isGameActive) {
+      return (
+        <div className="flex justify-center items-center h-screen">
+            <div className="bg-blue-200 p-4 text-center rounded-md">
+              <H1>Hra skončila. Prehral si. 🥺</H1>
+              <button 
+                className="bg-blue-400 px-2 py-4 rounded-lg mt-2 hover:bg-blue-100"
+                onClick={() => window.location.reload()}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Znovu načítať hru {isHovered ? "😃" : "😉"}
+              </button>
+            </div>
+        </div>
+    );
     }
 
     return (

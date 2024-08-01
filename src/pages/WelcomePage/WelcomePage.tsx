@@ -2,8 +2,7 @@ import { useForm } from "react-hook-form";
 import TextInput from "../../components/textInput/TextInput";
 import { H1 } from "../../components/ui/H1";
 import { useDispatch } from "react-redux";
-import { AppDispatch, RootState } from "../../state/store";
-import { useSelector } from "react-redux";
+import { AppDispatch } from "../../state/store";
 import { setUserName } from "../../state/userName/userNameSlice";
 
 interface FildValue {
@@ -15,7 +14,6 @@ const WelcomePage = () => {
   const { register, handleSubmit, formState: {errors} } = useForm<FildValue>();
 
   const dispatch = useDispatch<AppDispatch>();
-  const userName = useSelector((state: RootState) => state.userName.userName);
 
   const onSubmit = (data: FildValue) => {
     console.log(data)

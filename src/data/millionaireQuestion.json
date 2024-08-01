@@ -174,7 +174,7 @@
     },
     { 
       "question": "Koľko titul celkovo má v Lige Majstrov klub Fc Liverpool (k roku 2024) ?", 
-      "answers": ["2", "7", "6", 4], 
+      "answers": ["2", "7", "6", "4"], 
       "correctAnswer": "6", 
       "value": 100000 
     }
@@ -223,7 +223,7 @@
     { 
       "question": "Ktorý herec hral hlavného hrdinu vo filme Gladiátor ?", 
       "answers": ["Tom Cruise", "Brad Pitt", "Leonardo DiCaprio", "Russell Crowe"], 
-      "correctAnswer": "Ludwig van Beethoven", 
+      "correctAnswer": "Russell Crowe", 
       "value": 500000 
     },
     { 
