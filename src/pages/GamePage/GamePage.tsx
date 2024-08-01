@@ -19,6 +19,7 @@ const GamePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isGameActive, setIsGameActive] = useState(true);
     const [isHovered, setIsHovered] = useState(false);
+    const [isWinner, setIsWinner] = useState(false);
 
     const dispatch = useDispatch<AppDispatch>();
     
@@ -40,17 +41,23 @@ const GamePage = () => {
     }
 
     const handleConfirm = () => {
-        setIsModalOpen(false);
-        if (userChoice === correctAnswer) {
-            dispatch(incrementNumberOfQuestion());
-            setRandomSecondQuestion(Math.floor(Math.random() * 3));
-            setUserChoice("");
-            setClickedIndex(null);
+      setIsModalOpen(false);
+      if (userChoice === correctAnswer) {
+        if (numberOfQuestion >= 14) {
+          setIsGameActive(false);
+          setIsWinner(true);
         } else {
-          setIsGameActive(false);       
+          dispatch(incrementNumberOfQuestion());
+          setRandomSecondQuestion(Math.floor(Math.random() * 3));
+          setUserChoice("");
+          setClickedIndex(null);
         }
-    }
+      } else {
+        setIsGameActive(false);
+      }
+    };
 
+    console.log("number: " + numberOfQuestion)
     const handleCancel = () => {
         setIsModalOpen(false);
     }
@@ -59,7 +66,7 @@ const GamePage = () => {
       return (
         <div className="flex justify-center items-center h-screen">
             <div className="bg-blue-200 p-4 text-center rounded-md">
-              <H1>Hra skončila. Prehral si. 🥺</H1>
+              <H1>Hra skončila. {isWinner ? "Vyhral si gratulujeme 🤑" : "Prehral si. 🥺"}</H1>
               <button 
                 className="bg-blue-400 px-2 py-4 rounded-lg mt-2 hover:bg-blue-100"
                 onClick={() => window.location.reload()}

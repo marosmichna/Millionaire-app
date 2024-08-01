@@ -9,10 +9,7 @@ type AnswerProps = {
     setClickedIndex: (index: number) =>void,
 }
 
-const Answers = ({ firstAnswerNumber, secondAnswerNumber, clickedIndex, setUserChoice, setClickedIndex }: AnswerProps) => {
-
-    // const [clickedIndex, setClickedIndex] = useState<number | null>(null);
-    
+const Answers = ({ firstAnswerNumber, secondAnswerNumber, clickedIndex, setUserChoice, setClickedIndex }: AnswerProps) => {    
 
     const answers = useSelector((state: RootState) => state.millionaireQuestions.millionaireQuestions[firstAnswerNumber][secondAnswerNumber].answers);
 
