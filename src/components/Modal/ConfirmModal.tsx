@@ -13,8 +13,8 @@ interface ConfirmModalProps {
 const ConfirmModal = ({ isOpen, onConfirm, onCancel }: ConfirmModalProps) => {
   const customStyles: Modal.Styles = {
     content: {
-      width: '50%',
-      height: '50%',
+      width: '600px',
+      height: '600px',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
@@ -22,7 +22,7 @@ const ConfirmModal = ({ isOpen, onConfirm, onCancel }: ConfirmModalProps) => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '20px',
+      padding: '5rem',
       borderRadius: '10px',
       background: 'gray',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' 
